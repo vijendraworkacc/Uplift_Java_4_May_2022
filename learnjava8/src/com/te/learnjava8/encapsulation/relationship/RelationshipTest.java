@@ -8,10 +8,15 @@ public class RelationshipTest {
 		employee.setEmployeeName("Name01");
 		employee.setEmployeePhoneNumber(12345678L);
 
-		employee.getBatch().createMentorObject();
+		// employee.getBatch().createMentorObject();
 
 		// employee.getBatch().setMentor(Batch.createMentorObject2());
 
+		Batch batch = employee.getBatch();
+		batch.setMentor(Batch.createMentorObject2());
+
 		System.out.println(employee);
+		System.out.println();
+		System.out.println(employee.toString());
 	}
 }

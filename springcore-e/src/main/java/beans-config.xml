@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- We have two properties in bean tag called "init-method" and "destroy-method" 
+		to inform Spring framework that there exist a initialization method and a destroy 
+		method in the bean class created! -->
+	<!-- init method and destroy method is called before the creating and after 
+		the usage of the beans! -->
+	<!-- These methods are just to hold start-up and clean-up instructions -->
+	<bean class="com.te.springcore.springcorea.beans.Employee"
+		name="emp01" init-method="hi" destroy-method="bye">
+		<property name="employeeName" value="EMP01" />
+		<property name="employeeId" value="1" />
+		<property name="employeeAge" value="22" />
+		<property name="employeeCollegue">
+			<list>
+				<value>A</value>
+				<value>B</value>
+				<value>C</value>
+				<value>D</value>
+			</list>
+		</property>
+		<property name="employeeManager">
+			<set>
+				<value>X</value>
+				<value>Y</value>
+				<value>Z</value>
+			</set>
+		</property>
+		<property name="employeeTechRating">
+			<map>
+				<entry key="Java" value="5" />
+				<entry key="C" value="4" />
+				<entry key="C#" value="3" />
+			</map>
+		</property>
+	</bean>
+</beans>

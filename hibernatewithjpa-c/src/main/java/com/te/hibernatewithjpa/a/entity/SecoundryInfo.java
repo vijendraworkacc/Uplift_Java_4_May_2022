@@ -3,6 +3,8 @@ package com.te.hibernatewithjpa.a.entity;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
@@ -22,6 +24,8 @@ import lombok.ToString;
 @Entity
 public class SecoundryInfo {
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer infoId;
 	private String employeePanNumber;
 	private String employeeFN;
 	private String employeeMN;

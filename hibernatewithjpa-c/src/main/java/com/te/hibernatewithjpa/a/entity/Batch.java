@@ -1,5 +1,6 @@
 package com.te.hibernatewithjpa.a.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -30,5 +31,5 @@ public class Batch {
 	private String batchName;
 
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "batch")
-	private List<Employee> employees;
+	private List<Employee> employees = new ArrayList<>();
 }

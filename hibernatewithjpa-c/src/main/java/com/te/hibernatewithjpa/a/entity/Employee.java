@@ -36,7 +36,7 @@ public class Employee {
 	private int employeeAge;
 	private long employeePn;
 
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
 	@JoinColumn(name = "s_fk")
 	private SecoundryInfo secoundryInfo;
 

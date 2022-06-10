@@ -7,16 +7,20 @@
 <title>Register!</title>
 </head>
 <body>
-	<h1>Registration form!</h1>
+	<h1>Update employee data form!</h1>
 	<div style="width: 300px;">
 		<fieldset>
-			<form action="employee" method="POST">
+			<form action="employee/update" method="post">
 				<table>
+					<tr>
+						<td><input type="number" placeholder="Enter employee id: " name="employeeId"></td>
+					</tr>
 					<tr>
 						<td><input type="text" placeholder="Enter name: " name="name"></td>
 					</tr>
 					<tr>
-						<td><input type="email" placeholder="Enter email: " name="email"></td>
+						<td><input type="email" placeholder="Enter email: "
+							name="email"></td>
 					</tr>
 					<tr>
 						<td><input type="number" placeholder="Enter age: " name="age"></td>

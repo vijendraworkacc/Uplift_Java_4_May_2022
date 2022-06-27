@@ -1,1 +1,3 @@
-<% response.sendRedirect(request.getContextPath() + "") %>
+<h1>
+Hello!
+</h1>

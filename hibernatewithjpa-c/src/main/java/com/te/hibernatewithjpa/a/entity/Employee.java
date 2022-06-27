@@ -25,7 +25,6 @@ import lombok.ToString;
 @AllArgsConstructor
 @Getter
 @Setter
-@ToString
 @EqualsAndHashCode
 @Entity
 public class Employee {
@@ -36,7 +35,7 @@ public class Employee {
 	private int employeeAge;
 	private long employeePn;
 
-	@OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
+	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "s_fk")
 	private SecoundryInfo secoundryInfo;
 

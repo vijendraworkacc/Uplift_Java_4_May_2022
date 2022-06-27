@@ -1,7 +1,6 @@
 package com.te.learnjava8.java8features.consumer;
 
 import java.util.HashSet;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
